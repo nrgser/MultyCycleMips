@@ -1,0 +1,14 @@
+sw $zero,200($zero)
+addi $t1,$zero,4
+lui $t3,0xffff
+sllv $t2,$t3,$t1
+sw $t2,204($zero)
+sra $t4,$t3,3
+sw $t4,208($zero)
+srav $t5,$t3,$t1
+sw $t4,212($zero)
+div $t3,$t1
+mflo $t6
+mfhi $t7
+sw $t6,216($zero)
+sw $t7,220($zero)
